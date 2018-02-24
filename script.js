@@ -93,18 +93,16 @@ var app = new Vue({
         addRating: function(){
             this.numberRatings = this.numberRatings+1;
             if(!(this.number in this.averageRating)){
-                console.log("hello");
+               // console.log("hello");
                Vue.set(app.averageRating,this.number, 0);
                 this.ratingNumber[this.number] = 0;
                 this.total[this.number]=0;
             }
-            if(!this.number in this.total)
-                Vue.set(app.total, this.number, 0);
             this.total[this.number] =this.total[this.number] +this.rating 
             this.ratingNumber[this.number] = this.ratingNumber[this.number] +1;
-            console.log(this.ratingNumber[this.number]);
-            console.log(this.total[this.number]);
-            console.log(this.averageRating[this.number])
+           // console.log(this.ratingNumber[this.number]);
+           // console.log(this.total[this.number]);
+           // console.log(this.averageRating[this.number])
             this.averageRating[this.number] = (this.total[this.number]/this.ratingNumber[this.number]);
         },
   }

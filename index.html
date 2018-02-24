@@ -23,7 +23,7 @@
               <button v-on:click="nextComic">Next</button>
               <button v-on:click="lastComic">Last</button>
           </p>
-          <star-rating v-on:rating-selected="addRating" v-model="rating"></star-rating>
+          <star-rating v-on:rating-selected="addRating" v-model="rating" v-bind:increment="0.5" active-color="red"></star-rating>
           <p>average rating:</p><p>{{this.averageRating[this.number]}}</p>
            <h3>Add a Comment</h3>
 	<form v-on:submit.prevent="addComment">
